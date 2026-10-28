@@ -1,0 +1,259 @@
+:root {
+  --body-bg-color: #1a1a1a;
+  --card-bg-color: #252525;
+  --primary-color: #4ade80;
+  --secondary-color: #737174;
+  --success-color: #288046;
+  --icon-color: #2880458b;
+  --danger-color: #91333c;
+  --button-bg-color: #404040;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--body-bg-color);
+  text-align: center;
+  padding: 30px;
+}
+
+.heading {
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  font-size: 2.1rem;
+  letter-spacing: 1px;
+}
+
+.description {
+  color: var(--secondary-color);
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.pricing-grid {
+  padding: 20px;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 400px));
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.pricing-card {
+  background-color: var(--card-bg-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 25px 20px;
+  border-radius: 10px;
+  position: relative;
+  width: 100%;
+  min-width: 0;
+}
+
+.pricing-grid .pricing-card:nth-child(2) {
+  border: 2px solid var(--primary-color);
+  transform: scale(1.03);
+}
+
+.popular-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: var(--primary-color);
+  border-radius: 30px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 6px 12px;
+}
+
+.pricing-card-icon {
+  background-color: var(--icon-color);
+  border-radius: 50%;
+  padding: 10px 8px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pricing-card-icon i {
+  color: var(--primary-color);
+  font-size: 1.7rem;
+}
+
+.pricing-card-title {
+  font-size: 1.6rem;
+  color: white;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.pricing-card-price {
+  color: var(--secondary-color);
+  margin-bottom: 15px;
+}
+
+.amount {
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 3.5rem;
+  position: relative;
+}
+
+.amount::before {
+  content: "$";
+  font-size: 1.5rem;
+  position: absolute;
+  top: 10px;
+  left: -18px;
+  font-weight: 500;
+}
+
+.pricing-card-description {
+  color: var(--secondary-color);
+  font-size: 0.9rem;
+}
+
+hr {
+  border: none;
+  border-top: 2px solid #73717460;
+  height: 10px;
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.pricing-card-features {
+  align-self: flex-start;
+  padding-left: 30px;
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.pricing-card-features li {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.feature-available span {
+  color: var(--success-color);
+}
+
+.feature-unavailable span {
+  color: var(--danger-color);
+}
+
+.feature-available {
+  color: white;
+}
+
+.feature-unavailable {
+  color: #59585a;
+}
+
+.get-started-btn {
+  width: 85%;
+  max-width: 320px;
+  padding: 13px;
+  border-radius: 7px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 1rem;
+  color: white;
+  background-color: var(--button-bg-color);
+  border: 1px solid var(--secondary-color);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.get-started-btn:hover {
+  transform: translateY(-5px);
+}
+
+.highlight-btn {
+  background-color: var(--primary-color);
+  color: black;
+}
+
+.testimonial-card {
+  margin: 0 auto;
+  max-width: 700px;
+  width: 100%;
+  padding: 30px;
+  background-color: var(--card-bg-color);
+  border-radius: 5px;
+}
+
+.testimonial-quote {
+  color: white;
+  font-size: 0.9rem;
+  text-align: left;
+  line-height: 1.56;
+  margin-bottom: 20px;
+  position: relative;
+  margin-left: 30px;
+}
+
+.quote-icon {
+  position: absolute;
+  top: -15px;
+  left: -35px;
+  color: #4ade8068;
+  font-size: 1.7rem;
+}
+
+.testimonial-profile {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-left: 30px;
+}
+
+.testimonial-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+  border: 2px solid var(--primary-color);
+}
+
+.testimonial-info {
+  text-align: left;
+}
+
+.testimonial-name {
+  font-size: 1rem;
+  color: white;
+  letter-spacing: 0.5px;
+}
+
+.testimonial-role {
+  font-size: 0.8rem;
+  color: var(--primary-color);
+  letter-spacing: 0.5px;
+}
+
+@media screen and (max-width: 500px) {
+  .popular-badge {
+    display: none;
+  }
+  body {
+    padding: 10px;
+  }
+  .pricing-grid {
+    padding: 10px;
+  }
+}
